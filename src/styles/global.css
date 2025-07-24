@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  font-family: 'Pretendard', sans-serif;
+}
+
+input[type="file"] {
+  margin-bottom: 12px;
+}
+
+/* 기존 button 스타일은 components/common/Button.jsx에서 관리 */
+/* button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1976D2;
+} */

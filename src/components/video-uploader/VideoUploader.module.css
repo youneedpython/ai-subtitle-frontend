@@ -1,0 +1,194 @@
+/* src/components/video-uploader/VideoUploader.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.scriptSection {
+    width: 400px;
+    height: 400px;
+    /* 고정 높이 */
+    overflow-y: auto;
+    /* 스크롤바 */
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scriptListContainer {
+    /* 스크립트 목록 내부 스타일 - 필요시 추가 */
+}
+
+.scriptItem {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.scriptTime {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.scriptText {
+    margin-top: 5px;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* src/components/video-uploader/VideoUploader.module.css */
+
+/* 전체 컴포넌트 컨테이너 - 타이틀과 하위 섹션 사이 간격 */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    /* 세로 방향으로 요소들을 배열 */
+    align-items: center;
+    /* 가로축에서 중앙 정렬 */
+    padding: 0px 30px 30px 30px;
+    /* 상단 패딩 제거, 하단만 유지 */
+}
+
+/* 두 번째 줄: 버튼 섹션 스타일 */
+.buttonSection {
+    display: flex;
+    justify-content: center;
+    /* 버튼들을 가로축에서 중앙 정렬 */
+    align-items: center;
+    /* 세로축에서 중앙 정렬 */
+    margin-bottom: 30px;
+    /* 하단 여백 추가 */
+    width: 100%;
+    /* 너비를 100%로 설정하여 가운데 정렬 가능하게 함 */
+    max-width: 800px;
+    /* 적절한 최대 너비 설정 */
+}
+
+/* 파일 선택 input 스타일 개선 (기본 HTML input type="file"은 스타일링이 제한적) */
+.fileInput {
+    /* 기본 input 숨기기 */
+    display: none;
+}
+
+/* 파일 선택 버튼을 위한 커스텀 스타일 */
+.fileInput+button {
+    background-color: #6c757d;
+    /* 회색 톤 */
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    margin-left: 0;
+    /* 기본 버튼과의 간격 제거 */
+}
+
+.fileInput+button:hover {
+    background-color: #5a6268;
+}
+
+/* 세 번째 줄: 영상 및 스크립트 섹션 */
+.contentSection {
+    display: flex;
+    justify-content: center;
+    /* 영상과 스크립트를 가로축에서 중앙 정렬 */
+    gap: 40px;
+    /* 영상과 스크립트 사이 간격 */
+    width: 100%;
+    max-width: 1000px;
+    /* 적절한 최대 너비 설정 */
+}
+
+.videoPlayerWrapper {
+    flex: 1;
+    /* 가로 공간을 유연하게 차지 */
+    min-width: 480px;
+    /* 최소 너비 유지 */
+    max-width: 50%;
+    /* 최대 너비 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    /* 배경색으로 구분 */
+    border-radius: 8px;
+    overflow: hidden;
+    /* 비디오가 튀어나가지 않도록 */
+}
+
+.videoPlaceholder {
+    width: 100%;
+    height: 300px;
+    /* placeholder 높이 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+.scriptDisplayWrapper {
+    flex: 1;
+    /* 가로 공간을 유연하게 차지 */
+    min-width: 400px;
+    /* 최소 너비 유지 */
+    max-width: 50%;
+    /* 최대 너비 설정 */
+    overflow-y: auto;
+    /* 스크롤바 유지 */
+    height: 400px;
+    /* 높이 고정 유지 */
+    padding: 15px;
+    /* 내부 패딩 추가 */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* 배경색 설정 */
+    text-align: left;
+    /* 텍스트 왼쪽 정렬 */
+}
+
+.scriptDisplayWrapper h3 {
+    text-align: center;
+    /* 스크립트 타이틀 중앙 정렬 */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* 기존 scriptListContainer 및 scriptItem 스타일은 ScriptDisplay.jsx에서 유지 */
+.scriptItem {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.scriptTime {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9em;
+}
+
+.scriptText {
+    margin-top: 5px;
+    color: #444;
+    line-height: 1.4;
+}
