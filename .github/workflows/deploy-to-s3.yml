@@ -19,10 +19,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Setup Node.js   ## Node.js 환경 설정
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: '22'  ## 2) 프로젝트의 Node.js 버전에 맞게 수정
           cache: 'npm'        ## npm 의존성 캐싱으로 빌드 속도 향상
@@ -34,7 +34,7 @@ jobs:
         run: npm run build    ## 4) 프로젝트의 빌드 명령어
 
       - name: Configure AWS Credentials  ## OIDC 인증을 통해 AWS 임시 자격 증명 획득
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::393099937963:role/GitHubActioins-Frontend-Deploy-Role
           aws-region: ap-northeast-2   ## 6) S3 버킷이 위치한 AWS 리전
