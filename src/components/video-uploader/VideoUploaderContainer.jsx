@@ -103,7 +103,6 @@ function VideoUploaderContainer() {
                 >
                     {isLoading && srtFileName ? "다운로드 준비 중..." : "자막 다운로드"}
                 </Button>
-                {videoUrl && <VideoPlayer src={videoUrl} />}
             </div>
 
             {/* 세 번째 줄: 영상 및 스크립트 */}
