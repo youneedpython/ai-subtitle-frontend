@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-lates    ## Github에서 제공하는 최신 Ubuntu 환경 사용
+    runs-on: ubuntu-latest    ## Github에서 제공하는 최신 Ubuntu 환경 사용
 
     ## OIDC 인증을 위해 반드시 필요한 권한
     permissions:
@@ -36,7 +36,7 @@ jobs:
       - name: Configure AWS Credentials  ## OIDC 인증을 통해 AWS 임시 자격 증명 획득
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::393099937963:user/github-actions-frontend-user
+          role-to-assume: arn:aws:iam::393099937963:role/GitHubActioins-Frontend-Deploy-Role
           aws-region: ap-northeast-2   ## 6) S3 버킷이 위치한 AWS 리전
 
       - name: Deploy to S3
